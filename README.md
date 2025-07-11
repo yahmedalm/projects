@@ -1,1 +1,42 @@
-# projects
+File permissions in Linux - Project 11.7.25
+
+Project description -
+
+
+In this project, I worked as a security professional to manage and verify file and directory permissions using Linux commands. The goal was to ensure that only authorized users had access to specific files and directories, which helps improve system security and protect sensitive data.
+
+
+
+Check file and directory details - 
+
+To check the details of files and directories, including hidden files, I used the command ls -la. This command lists all files and directories in the current location and shows their permissions, ownership, and other details.
+
+
+
+Describe the permissions string - 
+
+The permissions string is a 10-character string that describes the type of file and the permissions for the user (owner), group, and others. For example: -rwxr-x---. The first character indicates the type of file (- for a file or d for a directory). The next three characters represent the permissions for the user (read, write, execute). The following three characters are for the group (read, execute), and the last three are for others (no permissions).
+
+
+
+Change file permissions -
+
+To change file permissions, I used the chmod command. For example, to set a file so that the user and group have read-only access and others have no access, I used chmod u=r,g=r,o= filename.txt. This command sets the user permission to read only, the group permission to read only, and removes all permissions from others.
+
+
+
+Change file permissions on a hidden file -
+
+For a hidden file, such as .project_x.txt, I first checked the permissions using ls -la .project_x.txt. Then, to set the user and group to have read-only permissions, I used chmod u=r,g=r,o= .project_x.txt.
+
+
+
+Change directory permissions -
+
+To change the permissions of a directory and remove access for the group, for example the drafts directory, I used chmod g-rwx drafts. If the directory was not found, I checked my current location using pwd and listed files and directories using ls -la to find the correct path. After locating the directory, I ran the chmod command with the correct path.
+
+
+
+Summary -
+
+In this activity, I learned how to check and interpret Linux file and directory permissions and how to change them using the chmod command. These skills help ensure that only authorized users can access or modify sensitive data, which is an important part of maintaining security on Linux systems.
